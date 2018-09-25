@@ -50,9 +50,8 @@ end
 
 def runner
   welcome 
-  initial_round
-  prompt_user
-  until current_card_total >= 21
+  hand = initial_round
+  until hand >= 21
     hit?(current_card_total) 
   end
   end_game(card_total)
