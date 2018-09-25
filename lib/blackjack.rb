@@ -50,11 +50,11 @@ end
 
 def runner
   welcome 
-  hand = initial_round # will show card total, so store as hand
-  until hand > 21 do
-    hand = hit?(hand) # updates card total in hand 
+  hand = initial_round       # will show card total, so store as hand
+  until hand > 21 do         # keep hitting until card total is over 21
+    hand = hit?(hand)        # updates card total in hand 
     display_card_total(hand) # puts card total 
   end
-  end_game(hand) # puts end game 
+  end_game(hand)             # puts end game 
 end
     
